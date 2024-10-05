@@ -25,12 +25,15 @@ string projectTimeCalculation(int neededHours,int days,int workers)
     float WorkingHoursOfAllDays;
     int trainingHours,totalWorkingHours,workersTimeToWork,projectTime;
     string result;
+    
     //working hours of a single day is 8 hours and overtime is 2 hours
+    
     WorkingHoursOfAllDays=days*(8+2);
     trainingHours=(10.0/100.0)*WorkingHoursOfAllDays;
     totalWorkingHours=WorkingHoursOfAllDays-trainingHours;
     workersTimeToWork= (totalWorkingHours*workers);
     projectTime=workersTimeToWork;
+    
     if(projectTime<neededHours)
     {
         int timeNeeded=neededHours-projectTime;
